@@ -1,0 +1,228 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: #333;
+    line-height: 1.6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input, form button {
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease-in-out;
+}
+
+form input:focus, form button:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+form button {
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 18px rgba(52, 152, 219, 0.2);
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #2980b9, #8e44ad);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(52, 152, 219, 0.3);
+}
+
+/* Heading */
+h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    background: linear-gradient(to right, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Register Link */
+.register-link {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.register-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Page */
+.profile-container {
+    text-align: center;
+    padding: 60px 40px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.profile-container img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+    border: 6px solid #3498db;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.profile-container h2 {
+    font-size: 40px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profile-container p {
+    font-size: 22px;
+    margin: 12px 0;
+    color: #7f8c8d;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.profile-container a {
+    font-size: 18px;
+    color: #3498db;
+    text-decoration: none;
+    padding: 14px 30px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    margin-top: 30px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.profile-container a:hover {
+    background-color: #3498db;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+
+    .profile-container {
+        padding: 40px;
+    }
+
+    .profile-container img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .profile-container h2 {
+        font-size: 32px;
+    }
+
+    .profile-container p {
+        font-size: 18px;
+    }
+
+    form input, form button {
+        font-size: 14px;
+    }
+}
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+footer {
+    background: #4e54c8;
+    color: white;
+    padding: 15px;
+    font-size: 14px;
+}
